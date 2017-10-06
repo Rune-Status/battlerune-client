@@ -70,7 +70,7 @@ public class Class4 implements Interface2 {
 						if (int_6 != 32767) {
 							int_7 = Client.secretPacketBuffer2.getUSmart();
 							int_9 = Client.secretPacketBuffer2.readUnsignedByte();
-							final int int_10 = int_6 > 0 ? Client.secretPacketBuffer2.method667() : int_9;
+							final int int_10 = int_6 > 0 ? Client.secretPacketBuffer2.readUByteN() : int_9;
 							npc_0.method884(int_5, Client.gameCycle, int_6, int_7, int_9, int_10);
 						} else {
 							npc_0.method882(int_5);

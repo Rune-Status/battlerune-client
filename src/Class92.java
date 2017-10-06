@@ -71,11 +71,11 @@ public class Class92 implements Runnable {
 		int int_5;
 		int int_6;
 		if (Client.packetType == 109) {
-			int_0 = Client.secretPacketBuffer2.method667();
+			int_0 = Client.secretPacketBuffer2.readUByteN();
 			int_1 = int_0 >> 2;
 			int_2 = int_0 & 0x3;
 			int_3 = Client.anIntArray154[int_1];
-			int_4 = Client.secretPacketBuffer2.method667();
+			int_4 = Client.secretPacketBuffer2.readUByteN();
 			int_5 = ((int_4 >> 4) & 0x7) + WorldMapType2.anInt242;
 			int_6 = (int_4 & 0x7) + CacheableNode_Sub4.anInt515;
 			if ((int_5 >= 0) && (int_6 >= 0) && (int_5 < 104) && (int_6 < 104)) {

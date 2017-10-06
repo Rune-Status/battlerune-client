@@ -336,7 +336,7 @@ public class Buffer extends Node {
 		payload[offset++] = (byte) (int_0 >> 24);
 	}
 
-	public int method667() {
+	public int readUByteN() {
 		return (0 - payload[offset++]) & 0xFF;
 	}
 
