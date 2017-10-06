@@ -323,7 +323,7 @@ public class Buffer extends Node {
 		return ((payload[offset - 2] & 0xFF) << 8) + ((payload[offset - 1] - 128) & 0xFF);
 	}
 
-	public int method665() {
+	public int readIntME() {
 		offset += 4;
 		return (payload[offset - 3] & 0xFF) + ((payload[offset - 4] & 0xFF) << 8) + ((payload[offset - 1] & 0xFF) << 16)
 				+ ((payload[offset - 2] & 0xFF) << 24);

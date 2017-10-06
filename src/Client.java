@@ -1807,7 +1807,7 @@ public final class Client extends GameEngine {
 					if (packetType == 215) {
 						int_1 = secretPacketBuffer2.readByteOb1();
 						int_2 = secretPacketBuffer2.method671();
-						int_3 = secretPacketBuffer2.method665();
+						int_3 = secretPacketBuffer2.readIntME();
 						widget_4 = Class18.method202(int_3);
 						widget_4.anInt299 = int_1 + (int_2 << 16);
 						packetType = -1;
@@ -1835,7 +1835,7 @@ public final class Client extends GameEngine {
 					}
 
 					if (packetType == 162) {
-						int_1 = secretPacketBuffer2.method665();
+						int_1 = secretPacketBuffer2.readIntME();
 						int_2 = secretPacketBuffer2.method677();
 						int_3 = secretPacketBuffer2.method678();
 						widget_4 = Class18.method202(int_1);
@@ -1857,7 +1857,7 @@ public final class Client extends GameEngine {
 					}
 
 					if (packetType == 57) {
-						int_1 = secretPacketBuffer2.method665();
+						int_1 = secretPacketBuffer2.readIntME();
 						int_2 = secretPacketBuffer2.readInt();
 						int_3 = secretPacketBuffer2.readByteOb1();
 						if (int_3 == 65535) {
@@ -2119,7 +2119,7 @@ public final class Client extends GameEngine {
 						int_1 = secretPacketBuffer2.readByteOb1();
 						int_2 = secretPacketBuffer2.readUShortA();
 						int_3 = secretPacketBuffer2.readUShortA();
-						int_4 = secretPacketBuffer2.method665();
+						int_4 = secretPacketBuffer2.readIntME();
 						widget_0 = Class18.method202(int_4);
 						if ((int_2 != widget_0.rotationX) || (int_3 != widget_0.rotationZ)
 								|| (int_1 != widget_0.modelZoom)) {
@@ -2883,7 +2883,7 @@ public final class Client extends GameEngine {
 						// interface
 						if (packetType == 111) {
 							int_1 = secretPacketBuffer2.readUByteN();
-							int_2 = secretPacketBuffer2.method665();
+							int_2 = secretPacketBuffer2.readIntME();
 							int_3 = secretPacketBuffer2.readUShortA();
 							widgetnode_1 = (WidgetNode) componentTable.get(int_2);
 							if (widgetnode_1 != null) {
