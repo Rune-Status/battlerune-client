@@ -318,7 +318,7 @@ public class Buffer extends Node {
 				+ ((payload[offset - 3] & 0xFF) << 24) + (payload[offset - 2] & 0xFF);
 	}
 
-	public int readUnsignedShortOb1() {
+	public int readUShortA() {
 		offset += 2;
 		return ((payload[offset - 2] & 0xFF) << 8) + ((payload[offset - 1] - 128) & 0xFF);
 	}

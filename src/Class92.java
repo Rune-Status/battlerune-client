@@ -302,7 +302,7 @@ public class Class92 implements Runnable {
 							int_6 = Client.anIntArray154[int_4];
 							byte byte_4 = Client.secretPacketBuffer2.method680();
 							int_9 = Client.secretPacketBuffer2.readByteOb1();
-							int_8 = Client.secretPacketBuffer2.readUnsignedShortOb1();
+							int_8 = Client.secretPacketBuffer2.readUShortA();
 							int_10 = Client.secretPacketBuffer2.method671();
 							int_11 = Client.secretPacketBuffer2.readByteOb1();
 							int_12 = Client.secretPacketBuffer2.method669();

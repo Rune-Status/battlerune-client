@@ -54,9 +54,9 @@ final class Class31 implements Interface1 {
 
 			Varcs.method506(int_0, int_12, true);
 		} else {
-			int_0 = Client.secretPacketBuffer2.readUnsignedShortOb1();
+			int_0 = Client.secretPacketBuffer2.readUShortA();
 			final boolean bool_1 = Client.secretPacketBuffer2.method669() == 1;
-			int_1 = Client.secretPacketBuffer2.readUnsignedShortOb1();
+			int_1 = Client.secretPacketBuffer2.readUShortA();
 			int_2 = Client.secretPacketBuffer2.readUnsignedShort();
 			Client.secretPacketBuffer2.bitAccess();
 

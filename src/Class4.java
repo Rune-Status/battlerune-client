@@ -92,7 +92,7 @@ public class Class4 implements Interface2 {
 			}
 
 			if ((int_2 & 0x40) != 0) {
-				int_3 = Client.secretPacketBuffer2.readUnsignedShortOb1();
+				int_3 = Client.secretPacketBuffer2.readUShortA();
 				if (int_3 == 65535) {
 					int_3 = -1;
 				}

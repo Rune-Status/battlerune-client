@@ -1320,7 +1320,7 @@ public final class Client extends GameEngine {
 				}
 
 				if (packetType == 186) {
-					anInt644 = secretPacketBuffer2.readUnsignedShortOb1() * 30;
+					anInt644 = secretPacketBuffer2.readUShortA() * 30;
 					anInt695 = anInt692;
 					packetType = -1;
 					return true;
@@ -1688,7 +1688,7 @@ public final class Client extends GameEngine {
 
 				if (packetType == 252) {
 					int_1 = secretPacketBuffer2.readInt();
-					int_2 = secretPacketBuffer2.readUnsignedShortOb1();
+					int_2 = secretPacketBuffer2.readUShortA();
 					widget_2 = Class18.method202(int_1);
 					if ((widget_2 != null) && (widget_2.type == 0)) {
 						if (int_2 > (widget_2.scrollHeight - widget_2.height)) {
@@ -2072,7 +2072,7 @@ public final class Client extends GameEngine {
 							int_2 = -1;
 						}
 
-						int_3 = secretPacketBuffer2.readUnsignedShortOb1();
+						int_3 = secretPacketBuffer2.readUShortA();
 						if (int_3 == 65535) {
 							int_3 = -1;
 						}
@@ -2117,8 +2117,8 @@ public final class Client extends GameEngine {
 					Widget widget_0;
 					if (packetType == 71) {
 						int_1 = secretPacketBuffer2.readByteOb1();
-						int_2 = secretPacketBuffer2.readUnsignedShortOb1();
-						int_3 = secretPacketBuffer2.readUnsignedShortOb1();
+						int_2 = secretPacketBuffer2.readUShortA();
+						int_3 = secretPacketBuffer2.readUShortA();
 						int_4 = secretPacketBuffer2.method665();
 						widget_0 = Class18.method202(int_4);
 						if ((int_2 != widget_0.rotationX) || (int_3 != widget_0.rotationZ)
@@ -2829,7 +2829,7 @@ public final class Client extends GameEngine {
 
 						// root interface
 						if (packetType == 129) {
-							int_1 = secretPacketBuffer2.readUnsignedShortOb1();
+							int_1 = secretPacketBuffer2.readUShortA();
 							widgetRoot = int_1;
 							method1039(false);
 							AClass1_Sub2.method607(int_1);
@@ -2883,7 +2883,7 @@ public final class Client extends GameEngine {
 						if (packetType == 111) {
 							int_1 = secretPacketBuffer2.method667();
 							int_2 = secretPacketBuffer2.method665();
-							int_3 = secretPacketBuffer2.readUnsignedShortOb1();
+							int_3 = secretPacketBuffer2.readUShortA();
 							widgetnode_1 = (WidgetNode) componentTable.get(int_2);
 							if (widgetnode_1 != null) {
 								MilliTimer.method690(widgetnode_1, int_3 != widgetnode_1.anInt392);
