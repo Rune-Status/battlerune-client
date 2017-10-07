@@ -1414,7 +1414,7 @@ public final class Client extends GameEngine {
 
 				int int_3;
 				if (packetType == 168) {
-					int_1 = secretPacketBuffer2.readUByte();
+					int_1 = secretPacketBuffer2.readByteOb1();
 					if (int_1 == 65535) {
 						int_1 = -1;
 					}
@@ -1614,7 +1614,7 @@ public final class Client extends GameEngine {
 				int int_6;
 				if (packetType == 177) {
 					int_1 = secretPacketBuffer2.readIntLE();
-					int_2 = secretPacketBuffer2.readUByte();
+					int_2 = secretPacketBuffer2.readByteOb1();
 					int_3 = (int_2 >> 10) & 0x1F;
 					int_4 = (int_2 >> 5) & 0x1F;
 					int_5 = int_2 & 0x1F;
@@ -1674,7 +1674,7 @@ public final class Client extends GameEngine {
 
 				if (packetType == 161) {
 					int_1 = secretPacketBuffer2.readIntIM();
-					int_2 = secretPacketBuffer2.readUByte();
+					int_2 = secretPacketBuffer2.readByteOb1();
 					widget_2 = Class18.method202(int_1);
 					if ((widget_2.modelType != 2) || (int_2 != widget_2.modelId)) {
 						widget_2.modelType = 2;
@@ -1808,7 +1808,7 @@ public final class Client extends GameEngine {
 
 					Widget widget_4;
 					if (packetType == 215) {
-						int_1 = secretPacketBuffer2.readUByte();
+						int_1 = secretPacketBuffer2.readByteOb1();
 						int_2 = secretPacketBuffer2.readUShortLEA();
 						int_3 = secretPacketBuffer2.readIntME();
 						widget_4 = Class18.method202(int_3);
@@ -1862,7 +1862,7 @@ public final class Client extends GameEngine {
 					if (packetType == 57) {
 						int_1 = secretPacketBuffer2.readIntME();
 						int_2 = secretPacketBuffer2.readInt();
-						int_3 = secretPacketBuffer2.readUByte();
+						int_3 = secretPacketBuffer2.readByteOb1();
 						if (int_3 == 65535) {
 							int_3 = -1;
 						}
@@ -2070,7 +2070,7 @@ public final class Client extends GameEngine {
 					long long_4;
 					if (packetType == 169) {
 						int_1 = secretPacketBuffer2.readIntIM();
-						int_2 = secretPacketBuffer2.readUByte();
+						int_2 = secretPacketBuffer2.readByteOb1();
 						if (int_2 == 65535) {
 							int_2 = -1;
 						}
@@ -2119,7 +2119,7 @@ public final class Client extends GameEngine {
 
 					Widget widget_0;
 					if (packetType == 71) {
-						int_1 = secretPacketBuffer2.readUByte();
+						int_1 = secretPacketBuffer2.readByteOb1();
 						int_2 = secretPacketBuffer2.readUShortA();
 						int_3 = secretPacketBuffer2.readUShortA();
 						int_4 = secretPacketBuffer2.readIntME();
@@ -2321,7 +2321,7 @@ public final class Client extends GameEngine {
 						int_4 = secretPacketBuffer2.readUnsignedShort();
 
 						for (int_5 = 0; int_5 < int_4; int_5++) {
-							int_6 = secretPacketBuffer2.readUByte();
+							int_6 = secretPacketBuffer2.readByteOb1();
 							int_7 = secretPacketBuffer2.readUnsignedByte();
 							if (int_7 == 255) {
 								int_7 = secretPacketBuffer2.readIntLE();
@@ -2790,9 +2790,6 @@ public final class Client extends GameEngine {
 							Class31.xteaChanged(false);
 							secretPacketBuffer2.readOpcode();
 							int_1 = secretPacketBuffer2.readUnsignedShort();
-
-							System.out.println("static region: " + int_1);
-
 							GroundObject.method537(secretPacketBuffer2, int_1);
 							packetType = -1;
 							return true;
@@ -2900,7 +2897,7 @@ public final class Client extends GameEngine {
 								MilliTimer.method690(widgetnode_1, int_3 != widgetnode_1.anInt392);
 							}
 
-							System.out.println("interface(" + (int_2 >> 16) + ", " + (int_2 & 0xFFFF) + ", " + int_3 + ", " + (int_1 == 1) + ");");
+							System.out.println("interface(" + (int_2 >> 16) + ", " + (int_2 & 0xFFFF) + ", " + int_3 + ", " + (int_1 == 1) + "); int_2: " + int_2);
 
 							GameObject.method535(int_2, int_3, int_1);
 							packetType = -1;

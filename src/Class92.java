@@ -208,7 +208,7 @@ public class Class92 implements Runnable {
 					int_1 = ((int_0 >> 4) & 0x7) + WorldMapType2.anInt242;
 					int_2 = (int_0 & 0x7) + CacheableNode_Sub4.anInt515;
 					int_3 = Client.secretPacketBuffer2.readUnsignedShort();
-					int_4 = Client.secretPacketBuffer2.readUByte();
+					int_4 = Client.secretPacketBuffer2.readByteOb1();
 					if ((int_1 >= 0) && (int_2 >= 0) && (int_1 < 104) && (int_2 < 104)) {
 						item_0 = new Item();
 						item_0.anInt584 = int_3;
@@ -301,10 +301,10 @@ public class Class92 implements Runnable {
 							int_5 = int_3 & 0x3;
 							int_6 = Client.anIntArray154[int_4];
 							byte byte_4 = Client.secretPacketBuffer2.method680();
-							int_9 = Client.secretPacketBuffer2.readUByte();
+							int_9 = Client.secretPacketBuffer2.readByteOb1();
 							int_8 = Client.secretPacketBuffer2.readUShortA();
 							int_10 = Client.secretPacketBuffer2.readUShortLEA();
-							int_11 = Client.secretPacketBuffer2.readUByte();
+							int_11 = Client.secretPacketBuffer2.readByteOb1();
 							int_12 = Client.secretPacketBuffer2.method669();
 							final int int_13 = ((int_12 >> 4) & 0x7) + WorldMapType2.anInt242;
 							final int int_14 = (int_12 & 0x7) + CacheableNode_Sub4.anInt515;

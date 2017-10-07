@@ -77,7 +77,6 @@ public class Class37 {
 		player_0.pathY[0] = int_3 - AClass4_Sub1.baseY;
 		player_0.anInt550 = (player_0.pathY[0] << 7) + (player_0.getSize() << 6);
 		AClass1_Sub1.plane = player_0.anInt632 = byte_0;
-
 		if (Class40.aBufferArray1[int_0] != null) {
 			player_0.decodeApperance(Class40.aBufferArray1[int_0]);
 		}
