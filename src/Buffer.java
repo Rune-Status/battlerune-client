@@ -291,7 +291,7 @@ public class Buffer extends Node {
 		payload[offset++] = (byte) ((int) long_0);
 	}
 
-	public int method662() {
+	public int readIntLE() {
 		offset += 4;
 		return (payload[offset - 4] & 0xFF) + ((payload[offset - 1] & 0xFF) << 24)
 				+ ((payload[offset - 2] & 0xFF) << 16) + ((payload[offset - 3] & 0xFF) << 8);

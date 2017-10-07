@@ -1468,7 +1468,7 @@ public final class Client extends GameEngine {
 				}
 
 				if (packetType == 28) {
-					int_1 = secretPacketBuffer2.method662();
+					int_1 = secretPacketBuffer2.readIntLE();
 					widget_1 = Class18.method202(int_1);
 					widget_1.modelType = 3;
 					widget_1.modelId = Script.localPlayer.composition.method483();
@@ -1613,7 +1613,7 @@ public final class Client extends GameEngine {
 				int int_4;
 				int int_6;
 				if (packetType == 177) {
-					int_1 = secretPacketBuffer2.method662();
+					int_1 = secretPacketBuffer2.readIntLE();
 					int_2 = secretPacketBuffer2.readByteOb1();
 					int_3 = (int_2 >> 10) & 0x1F;
 					int_4 = (int_2 >> 5) & 0x1F;
@@ -1644,7 +1644,7 @@ public final class Client extends GameEngine {
 				}
 
 				if (packetType == 200) {
-					int_1 = secretPacketBuffer2.method662();
+					int_1 = secretPacketBuffer2.readIntLE();
 					int_2 = secretPacketBuffer2.method663();
 					widget_2 = Class18.method202(int_1);
 					if ((int_2 != widget_2.anInt295) || (int_2 == -1)) {
@@ -1816,7 +1816,7 @@ public final class Client extends GameEngine {
 
 					if (packetType == 226) {
 						Class46.method270();
-						int_1 = secretPacketBuffer2.method662();
+						int_1 = secretPacketBuffer2.readIntLE();
 						int_2 = secretPacketBuffer2.readUByteN();
 						int_3 = secretPacketBuffer2.readUByteN();
 						skillExperiences[int_3] = int_1;
@@ -2321,7 +2321,7 @@ public final class Client extends GameEngine {
 							int_6 = secretPacketBuffer2.readByteOb1();
 							int_7 = secretPacketBuffer2.readUnsignedByte();
 							if (int_7 == 255) {
-								int_7 = secretPacketBuffer2.method662();
+								int_7 = secretPacketBuffer2.readIntLE();
 							}
 
 							if ((widget_2 != null) && (int_5 < widget_2.itemIds.length)) {
@@ -2845,10 +2845,11 @@ public final class Client extends GameEngine {
 							return true;
 						}
 
+						// interface transform
 						WidgetNode widgetnode_1;
 						if (packetType == 78) {
-							int_1 = secretPacketBuffer2.method662();
-							int_2 = secretPacketBuffer2.method662();
+							int_1 = secretPacketBuffer2.readIntLE();
+							int_2 = secretPacketBuffer2.readIntLE();
 							final WidgetNode widgetnode_3 = (WidgetNode) componentTable.get(int_1);
 							widgetnode_1 = (WidgetNode) componentTable.get(int_2);
 							if (widgetnode_1 != null) {
@@ -2876,15 +2877,17 @@ public final class Client extends GameEngine {
 								Class12.method170(widgetRoot, 1);
 							}
 
+							System.out.println("interfaceTransform(" + (int_2 >> 16) + ", " + (int_2 & 0xFFFF) + ", " + (int_1 >> 16) + ", " + (int_1 & 0xFFFF) + ");");
+
 							packetType = -1;
 							return true;
 						}
 
 						// interface
 						if (packetType == 111) {
-							int_1 = secretPacketBuffer2.readUByteN(); // good
+							int_1 = secretPacketBuffer2.readUByteN();
 							int_2 = secretPacketBuffer2.readIntME();
-							int_3 = secretPacketBuffer2.readUShortA(); // good
+							int_3 = secretPacketBuffer2.readUShortA();
 
 							widgetnode_1 = (WidgetNode) componentTable.get(int_2);
 							if (widgetnode_1 != null) {

@@ -133,7 +133,7 @@ public class Class4 implements Interface2 {
 
 			if ((int_2 & 0x4) != 0) {
 				npc_0.graphic = Client.secretPacketBuffer2.readByteOb1();
-				int_3 = Client.secretPacketBuffer2.method662();
+				int_3 = Client.secretPacketBuffer2.readIntLE();
 				npc_0.anInt557 = int_3 >> 16;
 				npc_0.graphicsDelay = (int_3 & 0xFFFF) + Client.gameCycle;
 				npc_0.anInt553 = 0;
