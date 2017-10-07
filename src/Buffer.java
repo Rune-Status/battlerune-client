@@ -392,7 +392,7 @@ public class Buffer extends Node {
 		payload[offset++] = (byte) (int_0 >> 8);
 	}
 
-	public byte method672() {
+	public byte readByteN() {
 		return (byte) (0 - payload[offset++]);
 	}
 

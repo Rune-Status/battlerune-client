@@ -1738,6 +1738,7 @@ public final class Client extends GameEngine {
 					return true;
 				}
 
+				// Varp Large
 				if (packetType == 217) {
 					int_1 = secretPacketBuffer2.readInt();
 					int_2 = secretPacketBuffer2.readUnsignedShort();
@@ -1755,9 +1756,11 @@ public final class Client extends GameEngine {
 				if ((packetType != 248) && (packetType != 214) && (packetType != 122) && (packetType != 102)
 						&& (packetType != 221) && (packetType != 56) && (packetType != 105) && (packetType != 34)
 						&& (packetType != 109)) {
+
+					// varp small
 					if (packetType == 189) {
 						int_1 = secretPacketBuffer2.method671();
-						final byte byte_1 = secretPacketBuffer2.method672();
+						final byte byte_1 = secretPacketBuffer2.readByteN();
 						Class86.settings[int_1] = byte_1;
 						if (Class86.widgetSettings[int_1] != byte_1) {
 							Class86.widgetSettings[int_1] = byte_1;

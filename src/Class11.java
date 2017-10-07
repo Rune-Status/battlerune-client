@@ -1336,12 +1336,10 @@ public class Class11 {
 						bool_1 = SoundTask.method313(widget_0);
 					}
 
-					System.out.println("interface clickable?: " + bool_1);
-
 					if (bool_1) {
 						Client.secretPacketBuffer1.putOpcode(9);
 						Client.secretPacketBuffer1.putInt(int_1);
-						System.out.println("buttonClick_24(" + (int_1 >> 16) + ", " + (int_1 & 0xFFFF) + ");");
+						System.out.println("buttonClick_24(" + (int_1 >> 16) + ", " + (int_1 & 0xFFFF) + "); int_1: " + int_1);
 					}
 				}
 
