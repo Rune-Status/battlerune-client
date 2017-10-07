@@ -21,8 +21,9 @@ public final class PacketBuffer extends Buffer {
 		return (super.payload[super.offset++] - cipher.nextInt()) & 0xFF;
 	}
 
+	// TODO reimplement ISAAC
 	public void putOpcode(final int int_0) {
-		super.payload[super.offset++] = (byte) (int_0 + cipher.nextInt());
+		super.payload[super.offset++] = (byte) (int_0 /*+ cipher.nextInt()*/);
 	}
 
 	public void bitAccess() {

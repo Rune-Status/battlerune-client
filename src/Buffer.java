@@ -312,10 +312,9 @@ public class Buffer extends Node {
 		return ((payload[offset - 1] & 0xFF) << 8) + (payload[offset - 2] & 0xFF);
 	}
 
-	public int method664() {
+	public int readIntIM() {
 		offset += 4;
-		return ((payload[offset - 1] & 0xFF) << 8) + ((payload[offset - 4] & 0xFF) << 16)
-				+ ((payload[offset - 3] & 0xFF) << 24) + (payload[offset - 2] & 0xFF);
+		return ((payload[offset - 1] & 0xFF) << 8) + ((payload[offset - 4] & 0xFF) << 16) + ((payload[offset - 3] & 0xFF) << 24) + (payload[offset - 2] & 0xFF);
 	}
 
 	public int readUShortA() {

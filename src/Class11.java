@@ -847,6 +847,7 @@ public class Class11 {
 		}
 
 		Widget widget_0;
+
 		if (int_2 == 1005) {
 			widget_0 = Class18.method202(int_1);
 			if ((widget_0 != null) && (widget_0.itemQuantities[int_0] >= 100000)) {
@@ -1335,9 +1336,12 @@ public class Class11 {
 						bool_1 = SoundTask.method313(widget_0);
 					}
 
+					System.out.println("interface clickable?: " + bool_1);
+
 					if (bool_1) {
 						Client.secretPacketBuffer1.putOpcode(9);
 						Client.secretPacketBuffer1.putInt(int_1);
+						System.out.println("buttonClick_24(" + (int_1 >> 16) + ", " + (int_1 & 0xFFFF) + ");");
 					}
 				}
 
