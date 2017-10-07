@@ -1441,7 +1441,7 @@ public final class Client extends GameEngine {
 				}
 
 				if (packetType == 212) {
-					int_1 = secretPacketBuffer2.method671();
+					int_1 = secretPacketBuffer2.readUShortLEA();
 					final XItemContainer xitemcontainer_0 = (XItemContainer) XItemContainer.itemContainers.get(int_1);
 					if (xitemcontainer_0 != null) {
 						xitemcontainer_0.unlink();
@@ -1660,7 +1660,7 @@ public final class Client extends GameEngine {
 
 				if (packetType == 227) {
 					int_1 = secretPacketBuffer2.readIntIM();
-					int_2 = secretPacketBuffer2.method671();
+					int_2 = secretPacketBuffer2.readUShortLEA();
 					widget_2 = Class18.method202(int_1);
 					if ((widget_2.modelType != 1) || (int_2 != widget_2.modelId)) {
 						widget_2.modelType = 1;
@@ -1759,7 +1759,7 @@ public final class Client extends GameEngine {
 
 					// varp small
 					if (packetType == 189) {
-						int_1 = secretPacketBuffer2.method671();
+						int_1 = secretPacketBuffer2.readUShortLEA();
 						final byte byte_1 = secretPacketBuffer2.readByteN();
 						Class86.settings[int_1] = byte_1;
 						if (Class86.widgetSettings[int_1] != byte_1) {
@@ -1809,7 +1809,7 @@ public final class Client extends GameEngine {
 					Widget widget_4;
 					if (packetType == 215) {
 						int_1 = secretPacketBuffer2.readByteOb1();
-						int_2 = secretPacketBuffer2.method671();
+						int_2 = secretPacketBuffer2.readUShortLEA();
 						int_3 = secretPacketBuffer2.readIntME();
 						widget_4 = Class18.method202(int_3);
 						widget_4.anInt299 = int_1 + (int_2 << 16);

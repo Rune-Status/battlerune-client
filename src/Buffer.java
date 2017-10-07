@@ -380,7 +380,7 @@ public class Buffer extends Node {
 		payload[offset++] = (byte) (int_0 + 128);
 	}
 
-	public int method671() {
+	public int readUShortLEA() {
 		offset += 2;
 		return ((payload[offset - 1] & 0xFF) << 8) + ((payload[offset - 2] - 128) & 0xFF);
 	}

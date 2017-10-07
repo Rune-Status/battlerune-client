@@ -199,7 +199,7 @@ public class Class92 implements Runnable {
 					int_4 = int_3 >> 2;
 					int_5 = int_3 & 0x3;
 					int_6 = Client.anIntArray154[int_4];
-					int_7 = Client.secretPacketBuffer2.method671();
+					int_7 = Client.secretPacketBuffer2.readUShortLEA();
 					if ((int_1 >= 0) && (int_2 >= 0) && (int_1 < 104) && (int_2 < 104)) {
 						Class22.method211(AClass1_Sub1.plane, int_1, int_2, int_6, int_7, int_4, int_5, 0, -1);
 					}
@@ -303,7 +303,7 @@ public class Class92 implements Runnable {
 							byte byte_4 = Client.secretPacketBuffer2.method680();
 							int_9 = Client.secretPacketBuffer2.readByteOb1();
 							int_8 = Client.secretPacketBuffer2.readUShortA();
-							int_10 = Client.secretPacketBuffer2.method671();
+							int_10 = Client.secretPacketBuffer2.readUShortLEA();
 							int_11 = Client.secretPacketBuffer2.readByteOb1();
 							int_12 = Client.secretPacketBuffer2.method669();
 							final int int_13 = ((int_12 >> 4) & 0x7) + WorldMapType2.anInt242;
