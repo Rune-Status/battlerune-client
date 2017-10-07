@@ -122,8 +122,8 @@ public class Class4 implements Interface2 {
 			}
 
 			if ((int_2 & 0x8) != 0) {
-				int_3 = Client.secretPacketBuffer2.readByteOb1();
-				int_4 = Client.secretPacketBuffer2.readByteOb1();
+				int_3 = Client.secretPacketBuffer2.readUByte();
+				int_4 = Client.secretPacketBuffer2.readUByte();
 				int_8 = npc_0.anInt547 - ((int_3 - AClass2.baseX - AClass2.baseX) * 64);
 				int_5 = npc_0.anInt550 - ((int_4 - AClass4_Sub1.baseY - AClass4_Sub1.baseY) * 64);
 				if ((int_8 != 0) || (int_5 != 0)) {
@@ -132,7 +132,7 @@ public class Class4 implements Interface2 {
 			}
 
 			if ((int_2 & 0x4) != 0) {
-				npc_0.graphic = Client.secretPacketBuffer2.readByteOb1();
+				npc_0.graphic = Client.secretPacketBuffer2.readUByte();
 				int_3 = Client.secretPacketBuffer2.readIntLE();
 				npc_0.anInt557 = int_3 >> 16;
 				npc_0.graphicsDelay = (int_3 & 0xFFFF) + Client.gameCycle;
@@ -148,7 +148,7 @@ public class Class4 implements Interface2 {
 			}
 
 			if ((int_2 & 0x2) != 0) {
-				npc_0.composition = Class81.getNpcDefinition(Client.secretPacketBuffer2.readByteOb1());
+				npc_0.composition = Class81.getNpcDefinition(Client.secretPacketBuffer2.readUByte());
 				npc_0.anInt542 = npc_0.composition.anInt518;
 				npc_0.anInt564 = npc_0.composition.anInt531;
 				npc_0.anInt545 = npc_0.composition.anInt520;

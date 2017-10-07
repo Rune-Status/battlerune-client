@@ -12,7 +12,7 @@ final class Class31 implements Interface1 {
 		int int_5;
 		if (!Client.isDynamicRegion) {
 			int_0 = Client.secretPacketBuffer2.readUnsignedShort();
-			final int int_12 = Client.secretPacketBuffer2.readByteOb1();
+			final int int_12 = Client.secretPacketBuffer2.readUByte();
 			int_1 = Client.secretPacketBuffer2.readUnsignedShort();
 			AClass2_Sub1.xteaKeys = new int[int_1][4];
 

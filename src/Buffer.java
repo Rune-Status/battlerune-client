@@ -307,7 +307,7 @@ public class Buffer extends Node {
 		return int_0;
 	}
 
-	public int readByteOb1() {
+	public int readUByte() {
 		offset += 2;
 		return ((payload[offset - 1] & 0xFF) << 8) + (payload[offset - 2] & 0xFF);
 	}
