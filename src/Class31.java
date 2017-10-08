@@ -11,13 +11,14 @@ final class Class31 implements Interface1 {
 		int int_4;
 		int int_5;
 		if (!Client.isDynamicRegion) {
-			// ushort
-			// ?
-			// ushort
 
+			// chunkX
 			int_0 = Client.secretPacketBuffer2.readUnsignedShort();
+
+			// chunkY
 			final int int_12 = Client.secretPacketBuffer2.readUShortLE();
 			int_1 = Client.secretPacketBuffer2.readUnsignedShort();
+
 			AClass2_Sub1.xteaKeys = new int[int_1][4];
 
 			for (int_2 = 0; int_2 < int_1; int_2++) {
